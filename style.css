@@ -1,0 +1,128 @@
+*, *::before, *::after { 
+    box-sizing: border-box; 
+}
+body { 
+    margin: 0; 
+    padding: 0; 
+    font-size: 16px;
+    font-family: 'Karla', sans-serif;
+    background-color: hsl(204, 43%, 93%);
+}
+
+/* Colors & Typography */
+
+.primary--dark {
+    background-color: hsl(179, 62%, 43%);
+    color: hsl(179, 62%, 43%);
+}
+
+.primary--light {
+    background-color: hsl(179, 53%, 54%);
+}
+
+.accent {
+    color: hsl(71, 73%, 54%);
+    background-color: hsl(71, 73%, 54%);
+}
+
+.neutral--dark {
+    color: hsl(218, 22%, 67%);
+}
+
+.neutral--light {
+    color:hsl(204, 43%, 93%);
+}
+
+h2.primary--dark, 
+h3.accent {
+    background-color: white;   
+}
+
+.btn {
+    color:hsl(204, 43%, 93%);
+    text-decoration: none;
+    padding: .6em 4em;
+    display: block;
+    text-align: center;
+    border-radius: 4px;
+    box-shadow: 0px 10px 5px -4px rgba(0,0,0,0.2);
+    transition: all .2s ease;
+    font-weight: 700;
+}
+
+.btn:hover {
+    background-color: hsl(204, 43%, 93%);
+    color: hsl(71, 73%, 54%);
+}
+
+.btn:focus {
+    background-color: hsl(204, 43%, 93%);
+    color: hsl(71, 73%, 54%);
+}
+
+/* Layout */
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 2em;
+}
+
+.wrapper {
+    background-color: white;;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "card-main card-main" "price about"
+}
+
+.box {
+    padding: 2em;
+}
+
+.card-main {
+    grid-area: card-main;
+}
+
+.price {
+    grid-area: price;
+}
+
+.flex-price {
+    display: flex;
+    align-items: center;
+}
+
+.flex-price h4 {
+    font-size: 1.5em;
+    padding-right: .3em;
+    margin: 0;
+}
+
+.price p {
+    padding-bottom: 1em;
+}
+
+.about {
+    grid-area: about;
+}
+
+li.neutral--light {
+    list-style: none;
+}
+
+ul.remove-list {
+    padding-left: 0;
+}
+
+
+@media (max-width: 425px) {
+    .wrapper {
+        grid-template-columns: 100%;
+        grid-template-areas: "card-main" "price" "about";
+    }
+
+}
